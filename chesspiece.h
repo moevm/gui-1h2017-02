@@ -20,7 +20,7 @@ class ChessPiece : public QLabel {
   ~ChessPiece();
   // Выровнять фигуру по сетке
   void alignToGrid();
- private:
+// public:
   // parent - шахматная доска
   // side - цвет: чёрный / белый
   // type - тип фигуры

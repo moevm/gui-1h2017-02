@@ -51,10 +51,24 @@ PieceType char2pieceType(QChar c) {
       return KING;
 
     default:
-      throw QString("Не распознан символ: %1").arg(c);
+      return PAWN;
   }
 }
 
 Game::Game() {
 }
 
+
+PlayerSide color(QChar c)
+{
+    switch(c.toUpper().toLatin1())
+    {
+        case 'B':
+        return BLACK;
+        case 'W':
+        return WHITE;
+        default:
+        return WHITE;
+
+    }
+}

@@ -14,6 +14,8 @@ QString pieceType2s(PieceType type);
 // Символ в тип фигуры
 PieceType char2pieceType(QChar c);
 
+PlayerSide color(QChar c);
+
 // Размер клетки доски в пикселях
 const int CELL = 50;
 

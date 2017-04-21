@@ -98,27 +98,36 @@ void MainWindow::paintEvent(QPaintEvent*) {
 
 void MainWindow::on_pushButton_clicked()
 {
-
+    ui->board->clearBoard();
     for(int i=0;i<8;i++)
     {
         for(int j=0;j<8;j++)
         {
             QString valueCell = ui->tableWidget->item(i,j)->text();
-
-            ui->board->addChessPieceInCell(i,j,valueCell);
+//            if(!valueCell.isEmpty())
+//            {
+                  ui->board->addChessPieceInCell(i,j,valueCell);
+//            }
         }
     }
+    ui->board->convert();
 
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
+//    this->paintEngine();
     for(int i=0;i<8;i++)
     {
         for(int j=0;j<8;j++)
         {
-            ui->tableWidget->setItem(i,j,new QTableWidgetItem(NULL,1000));
-            ui->board->addChessPieceInCell(i,j,NULL);
+            if(!ui->tableWidget->item(i,j)->text().isEmpty())
+            {
+                  ui->tableWidget->setItem(i,j,new QTableWidgetItem(NULL,1000));
+                  ui->board->addChessPieceInCell(i,j,NULL);
+            }
         }
     }
+    ui->board->convert();
+
 }
