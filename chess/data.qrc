@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>data/bishop-black.png</file>
+        <file>data/bishop-white.png</file>
+        <file>data/king-black.png</file>
+        <file>data/king-white.png</file>
+        <file>data/knight-black.png</file>
+        <file>data/knight-white.png</file>
+        <file>data/pawn-black.png</file>
+        <file>data/pawn-white.png</file>
+        <file>data/queen-black.png</file>
+        <file>data/queen-white.png</file>
+        <file>data/rook-black.png</file>
+        <file>data/rook-white.png</file>
+        <file>data/board.txt</file>
+    </qresource>
+</RCC>
